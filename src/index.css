@@ -1,0 +1,1168 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f0f0f;
+  color: white;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-group button {
+  margin: 10px;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  background: gold;
+  color: black;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.btn-group .outline {
+  background: transparent;
+  border: 1px solid gold;
+  color: gold;
+}
+
+.btn-group button:hover {
+  transform: scale(1.05);
+}
+
+
+
+.sidebar {
+  width: 280px;
+  background: #111;
+  padding: 20px;
+}
+
+.sidebar input,
+.sidebar textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+}
+
+.preview-area {
+  flex: 1;
+  padding: 20px;
+}
+
+.resume {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.download-btn {
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background: gold;
+  border: none;
+  cursor: pointer;
+}
+
+/* ANIMATIONS */
+.fadeIn {
+  animation: fadeIn 1s ease-in;
+}
+
+.slideIn {
+  animation: slideIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideIn {
+  from {transform: translateX(-100px); opacity: 0;}
+  to {transform: translateX(0); opacity: 1;}
+}
+.home {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #111, #000);
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ORBS BACKGROUND */
+.orb {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: gold;
+  filter: blur(120px);
+  opacity: 0.15;
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out;
+}
+
+.o1 { top: 10%; left: 10%; }
+.o2 { bottom: 10%; right: 10%; }
+.o3 { top: 40%; right: 40%; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+}
+
+
+.builder.modern {
+  background: #0f0f0f;
+  color: gold;
+}
+
+.builder.dark {
+  background: #111;
+  color: #fff;
+}
+
+.builder.minimal {
+  background: #ffffff;
+  color: #111;
+}
+
+.builder.creative {
+  background: #1a1a2e;
+  color: #f5c542;
+}
+/* .builder-layout {
+  display: flex;
+  min-height: 100vh;
+} */
+.builder-layout {
+  display: flex;
+  width: 100%;
+}
+/* SIDEBAR */
+.sidebar {
+  width: 30%;
+  padding: 20px;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.sidebar input,
+.sidebar textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+/* PREVIEW */
+/* .preview-section {
+  width: 70%;
+  padding: 30px;
+} */
+.preview-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.pdf-wrapper {
+  width: 210mm;      /* A4 width */
+  min-height: 297mm; /* A4 height */
+ 
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* margin-left: -3.5rem; */
+
+}
+
+/* .resume-card {
+  width: 240mm;
+  min-height: 297mm;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  margin: 0 auto;   
+  background: white;
+  margin-left: -7.5rem;
+  margin-top: -2rem;
+  margin-bottom: -2rem;
+ 
+
+} */
+
+.resume-card {
+  width: 210mm;
+  background: white;
+  color: black;
+  border-radius: 10px;
+  min-height: 297mm;
+
+  padding: 30px;
+  box-sizing: border-box;
+
+  margin: 0 auto;
+  background: white;
+ 
+}
+/* line */
+.line {
+  height: 2px;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+/* theme picker */
+.theme-picker {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+}
+
+.theme-picker span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+
+/* skills */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skills span {
+  background: #eee;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+/* theme toggle */
+.theme-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.theme-toggle button {
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* theme bar */
+.theme-bar {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.theme-bar span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* SIDEBAR SKILLS */
+.skill-box {
+  display: flex;
+  gap: 5px;
+}
+
+.skill-box input {
+  flex: 1;
+}
+
+.skill-list {
+  margin-top: 10px;
+}
+
+.skill-item {
+  display: flex;
+  justify-content: space-between;
+  background: #eee;
+  color: #000;
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+/* ❌ remove skill */
+.skill-item span {
+  cursor: pointer;
+}
+
+/* PDF BUTTON */
+.pdf-btn {
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+  background: gold;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Hover effect */
+.pdf-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: linear-gradient(135deg, gold, #ffdd55);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+.pdf-btn-save{
+   width: 20%;
+  margin-top: 3px;
+  padding: 7px;
+  background: gold;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Hover effect */
+.pdf-btn-save:hover {
+  transform: translateY(-2px) scale(1.02);
+  background: linear-gradient(135deg, gold, #ffdd55);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+/* THEME COLORS PANEL */
+.color-panel {
+  margin-top: 20px;
+}
+
+.color-panel span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  margin: 4px;
+  cursor: pointer;
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+  width: 95px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 2rem;
+}
+
+/* 🌟 CIRCLE BUTTON (PRO LOOK) */
+.theme-btn {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, gold, orange);
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+/* Hover effect */
+.theme-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+/* 🌈 COLOR PANEL */
+.color-panel {
+  position: fixed;
+  right: 80px;
+  bottom: 20px;
+  background: rgba(0,0,0,0.7);
+  padding: 10px;
+  border-radius: 12px;
+  display: flex;
+  gap: 8px;
+  backdrop-filter: blur(10px);
+  
+}
+
+/* 🎨 COLOR CIRCLES */
+.color-panel span {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: 0.2s;
+}
+
+.color-panel span:hover {
+  transform: scale(1.2);
+}
+
+/* 🌍 THEME WRAPPER POSITION */
+.theme-wrapper {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 999;
+}
+
+
+
+
+
+
+
+/* =========================
+   HOME PAGE BASE
+========================= */
+.home {
+  min-height: 100vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+  font-family: Arial;
+
+  /* deep cinematic background */
+  background: radial-gradient(circle at top, #0f0f0f, #000000);
+}
+.home::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: #ffcc00;
+  opacity: 0.08;
+  filter: blur(160px);
+  top: -150px;
+  left: -150px;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: #ffcc00;
+  opacity: 0.06;
+  filter: blur(160px);
+  bottom: -150px;
+  right: -150px;
+}
+/* =========================
+   GLOW ORBS
+========================= */
+/* .bg-orb {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  filter: blur(160px);
+  opacity: 0.15;
+  animation: float 8s infinite ease-in-out;
+}
+
+.o1 {
+  background: gold;
+  top: 10%;
+  left: 10%;
+}
+
+.o2 {
+  background: #ff63c3;
+  bottom: 10%;
+  right: 10%;
+  animation-duration: 10s;
+}
+
+.o3 {
+  background: #ff4d6d;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+.resume-card {
+  transition: all 0.3s ease;
+}
+
+/* MODERN */
+.resume-card.modern {
+  background: #111;
+  color: gold;
+}
+
+/* DARK */
+.resume-card.dark {
+  background: #0a0a0a;
+  color: white;
+}
+
+/* MINIMAL */
+.resume-card.minimal {
+  background: #f5f5f5;
+  color: #111;
+}
+
+/* CREATIVE */
+.resume-card.creative {
+  background: linear-gradient(135deg, purple, black);
+  color: white;
+}
+
+/* CORPORATE */
+.resume-card.corporate {
+  background: #1a1a1a;
+  color: #eaeaea;
+}
+
+/* TECH */
+.resume-card.tech {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+}
+
+/* ELEGANT */
+.resume-card.elegant {
+  background: linear-gradient(135deg, #c6a700, #000);
+  color: white;
+}
+
+/* BOLD */
+.resume-card.bold {
+  background: linear-gradient(135deg, red, black);
+  color: white;
+}
+
+/* CLASSIC */
+.resume-card.classic {
+  background: #ddd;
+  color: #111;
+}
+.bubbles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bubbles span {
+  position: absolute;
+  bottom: -120px;
+  border-radius: 50%;
+  background: rgba(255, 215, 0, 0.12);
+  animation: rise 18s infinite linear;
+  opacity: 0.6;
+}
+
+.bubbles span:nth-child(1) { width: 60px; height: 60px; left: 10%; animation-duration: 14s; }
+.bubbles span:nth-child(2) { width: 40px; height: 40px; left: 25%; animation-duration: 16s; }
+.bubbles span:nth-child(3) { width: 30px; height: 30px; left: 40%; animation-duration: 12s; }
+.bubbles span:nth-child(4) { width: 70px; height: 70px; left: 60%; animation-duration: 18s; }
+.bubbles span:nth-child(5) { width: 50px; height: 50px; left: 75%; animation-duration: 15s; }
+.bubbles span:nth-child(6) { width: 35px; height: 35px; left: 90%; animation-duration: 13s; }
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.2);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  text-align: center;
+  z-index: 10;
+  max-width: 700px;
+  animation: fadeUp 1s ease;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  width: 45rem;
+
+}
+
+.hero h1 span {
+  color: gold;
+  text-shadow: 0 0 20px gold;
+}
+
+.hero p {
+  margin-top: 10px;
+  opacity: 0.7;
+  font-size: 16px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.hero-btns {
+  margin-top: 25px;
+}
+
+.hero-btns button {
+  padding: 12px 22px;
+  margin: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: 0.3s;
+}
+
+.hero-btns button:first-child {
+  background: gold;
+  color: black;
+}
+
+.hero-btns button:last-child {
+  background: transparent;
+  border: 1px solid gold;
+  color: gold;
+}
+
+.hero-btns button:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   MODAL
+========================= */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.modal {
+  width: 70%;
+  max-width: 900px;
+  background: #0f0f0f;
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid gold;
+}
+
+.modal h2 {
+  text-align: center;
+  color: gold;
+}
+
+/* =========================
+   TEMPLATE GRID
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background: #151515;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  border: 1px solid gold;
+}
+
+.card h4 {
+  text-align: center;
+  margin-top: 10px;
+  color: gold;
+}
+
+/* =========================
+   TEMPLATE PREVIEWS
+========================= */
+
+.preview {
+  height: 100px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+/* MODERN - clean beige + soft gray */
+.preview.modern {
+  background: linear-gradient(135deg, #fdf6e3, #e9eef5);
+}
+
+/* DARK (SOFT not harsh black) */
+.preview.dark {
+  background: linear-gradient(135deg, #2b2b2b, #3d3d3d);
+}
+
+/* MINIMAL - pure clean white */
+.preview.minimal {
+  background: #f8f9fa;
+}
+
+/* CREATIVE - soft pastel purple */
+.preview.creative {
+  background: linear-gradient(135deg, #e9d5ff, #fce7f3);
+}
+/* ELEGANT - gold + cream soft */
+.preview.Brand {
+  background: linear-gradient(135deg, #3b1729, #000000);
+}
+/* CORPORATE - professional navy soft */
+.preview.corporate {
+  background: linear-gradient(135deg, #1f2937, #374151);
+}
+
+/* TECH - blue gradient soft */
+.preview.tech {
+  background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+}
+
+/* ELEGANT - gold + cream soft */
+.preview.elegant {
+  background: linear-gradient(135deg, #fff7d6, #f3f4f6);
+}
+
+/* BOLD - muted red (not harsh) */
+.preview.bold {
+  background: linear-gradient(135deg, #fca5a5, #1f2937);
+}
+
+/* CLASSIC - neutral gray */
+.preview.classic {
+  background: linear-gradient(135deg, #e5e7eb, #9ca3af);
+}
+.card:hover .preview {
+  transform: scale(1.03);
+  transition: 0.3s ease;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+.close-btn {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background: transparent;
+  border: 1px solid gold;
+  color: gold;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes rise {
+  0% { transform: translateY(0); opacity: 0; }
+  20% { opacity: 0.4; }
+  100% { transform: translateY(-110vh); opacity: 0; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 22px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  color: #ffffff;
+
+  padding: 10px 16px;
+  border-radius: 14px;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.12),
+    rgba(255, 255, 255, 0.04)
+  );
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+  overflow: hidden;
+  font-family: "Poppins", "Inter", sans-serif;
+   font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* ✨ glow hover effect */
+.logo:hover {
+  transform: translateY(-3px) scale(1.02);
+
+  box-shadow:
+    0 15px 40px rgba(255, 204, 112, 0.25),
+    0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* animated light shine */
+.logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+
+  transition: 0.5s;
+}
+
+.logo:hover::before {
+  left: 100%;
+}
+
+/* DOT */
+.logo-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle, gold, #ff9f43);
+
+  box-shadow:
+    0 0 10px #ffcc70,
+    0 0 20px rgba(255, 204, 112, 0.6);
+
+  animation: pulse 2s infinite;
+}
+
+/* pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px gold;
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 18px gold;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px gold;
+  }
+}
+.login-btn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(10px);
+
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.login-btn:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.15);
+}
+
+.success-card {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+
+  background: #111;
+  color: #fff;
+
+  padding: 16px 20px;
+  border-radius: 12px;
+
+  width: 260px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  animation: slideIn 0.4s ease;
+  z-index: 9999;
+}
+
+.success-card h3 {
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.success-card p {
+  font-size: 13px;
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.success-card button {
+  background: gold;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* animation */
+@keyframes slideIn {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+/* .login-btn {
+  cursor: pointer;
+} */
+
+.modal h3 {
+  margin-bottom: 5px;
+}
+
+.modal input {
+  padding: 9px;
+  border-radius: 8px;
+  margin-left: 10px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: #0f0f0f;
+  color: white;
+  outline: none;
+}
+
+.modal button {
+  padding: 9px;
+  border: none;
+  margin-left: 5px;
+  border-radius: 8px;
+  background: gold; /* SAME THEME */
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* =========================
+   RESPONSIVE FIXES
+   (ADD AT END OF FILE)
+========================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+
+  .builder-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .preview-section {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .resume-card {
+    width: 95%;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .builder-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .preview-section {
+    padding: 10px;
+    justify-content: center;
+  }
+
+  .pdf-wrapper {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .resume-card {
+    width: 100%;
+    min-height: auto;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .hero {
+    padding: 20px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .hero-btns button {
+    width: 100%;
+    margin: 6px 0;
+  }
+
+  .modal {
+    width: 85%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+
+  .sidebar {
+    padding: 10px;
+  }
+
+  .resume-card {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .logo {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .login-btn {
+    width: 42px;
+    height: 42px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .theme-btn {
+    width: 55px;
+    height: 55px;
+  }
+
+  .color-panel {
+    right: 10px;
+    bottom: 80px;
+    flex-wrap: wrap;
+    width: 120px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .modal .grid {
+    max-height: 70vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+}
