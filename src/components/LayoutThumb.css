@@ -1,0 +1,146 @@
+.lt {
+  font-size: 10px; /* everything is sized in em, so the size can be scaled */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  padding: 1.4em;
+  background: var(--lt-bg, #1a1a1d);
+  border-radius: 0.8em;
+  overflow: hidden;
+  text-align: left;
+}
+
+.lt--sidebar {
+  flex-direction: row;
+  gap: 0;
+  padding: 0;
+}
+
+.lt__head {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  margin-bottom: 0.4em;
+}
+.lt__id {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.lt__avatar {
+  flex-shrink: 0;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: var(--lt-ink, #fff);
+  opacity: 0.85;
+}
+
+.lt__line {
+  display: block;
+  width: 100%;
+  height: 0.4em;
+  border-radius: 0.2em;
+  background: var(--lt-ink, #fff);
+  opacity: 0.28;
+}
+.lt__line--short {
+  width: 68%;
+}
+.lt__line--title {
+  width: 62%;
+  height: 0.5em;
+  opacity: 0.95;
+}
+.lt__line--sub {
+  width: 40%;
+  opacity: 0.5;
+}
+.lt__line--head {
+  width: 30%;
+  height: 0.5em;
+  margin-top: 0.4em;
+  opacity: 0.9;
+}
+.lt__gap {
+  display: block;
+  height: 0.4em;
+}
+
+/* centered */
+.lt--centered .lt__head {
+  flex-direction: column;
+  text-align: center;
+}
+.lt--centered .lt__id {
+  width: 100%;
+  align-items: center;
+}
+.lt--centered .lt__id .lt__line--title {
+  width: 56%;
+}
+.lt--centered .lt__id .lt__line--sub {
+  width: 36%;
+}
+.lt--centered .lt__line--head {
+  align-self: center;
+}
+
+/* sidebar */
+.lt__side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  width: 34%;
+  padding: 1.2em 0.9em;
+  background: var(--lt-side, rgba(255, 255, 255, 0.08));
+}
+.lt__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  padding: 1.2em 1em;
+}
+.lt--sidebar .lt__line--head {
+  margin-top: 0.2em;
+}
+/* banner */
+.lt--banner {
+  padding: 0;
+  gap: 0;
+}
+.lt__band {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  padding: 1.3em 1.4em;
+  background: var(--lt-band, rgba(255, 255, 255, 0.14));
+}
+.lt__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+  padding: 1.1em 1.4em;
+}
+
+/* compact */
+.lt--compact {
+  gap: 0.38em;
+  padding: 1.2em 1.3em;
+}
+.lt--compact .lt__line {
+  height: 0.3em;
+}
+.lt--compact .lt__line--title,
+.lt--compact .lt__line--head {
+  height: 0.4em;
+}
+.lt--compact .lt__avatar {
+  width: 1.6em;
+  height: 1.6em;
+}

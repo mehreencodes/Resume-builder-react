@@ -1,138 +1,29 @@
-/* HOME */
-.home {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #8e127b, #b5179e);
-  color: white;
-  text-align: center;
-  overflow: hidden;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  animation: fadeUp 1s ease;
+html {
+  scroll-behavior: smooth;
 }
 
-.btns {
-  margin-top: 20px;
-  display: flex;
-  gap: 15px;
-  justify-content: center;
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #0b0b0c;
+  color: #f5f5f5;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-.btn {
-  padding: 12px 24px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
 }
 
-.primary {
-  background: white;
-  color: black;
-}
-
-.outline {
-  border: 2px solid white;
-  background: transparent;
-  color: white;
-}
-
-/* ANIMATION */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* BUBBLES */
-.bubble {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255,255,255,0.2);
-  animation: float 10s infinite;
-}
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-900px); }
-}
-
-/* BUILDER */
-.builder {
-  display: flex;
-  height: 100vh;
-}
-
-/* SIDEBAR (YOUR STYLE PRESERVED + IMPROVED) */
-.sidebar {
-  width: 30%;
-  padding: 20px;
-  background: #fff;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-}
-
-/* PREVIEW */
-.preview {
-  flex: 1;
-  padding: 40px;
-}
-
-/* OLD COLOR PANEL (RIGHT SIDE) */
-.themePanel {
-  position: fixed;
-  right: 20px;
-  top: 40%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.colorBox {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-/* FLOATING BUTTON */
-.floating {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-}
-
-.fab {
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-  border: none;
-  background: #b5179e;
-  color: white;
-  cursor: pointer;
-}
-
-.popup {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 10px;
-}
-
-.popup div {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-
-/* DARK + GOLD THEMES */
-.dark {
-  background: #111;
-  color: white;
-}
-
-.gold {
-  background: #fff7e0;
-  color: #5c4300;
+img {
+  max-width: 100%;
 }
