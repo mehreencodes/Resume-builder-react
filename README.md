@@ -4,7 +4,6 @@ A browser-based resume builder. Choose a layout and a color theme, fill in your 
 
 **Live demo:** https://resume-builder-react-pied.vercel.app/
 
-![Home page](docs/screenshots/home.png)
 
 ## Overview
 
